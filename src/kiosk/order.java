@@ -32,6 +32,14 @@ public class order extends javax.swing.JFrame {
         btnMC2 = new javax.swing.JButton();
         btnMC3 = new javax.swing.JButton();
         btnMC4 = new javax.swing.JButton();
+        lblMC1 = new javax.swing.JLabel();
+        lblMC2 = new javax.swing.JLabel();
+        lblMC3 = new javax.swing.JLabel();
+        lblMC4 = new javax.swing.JLabel();
+        lblMCPrice1 = new javax.swing.JLabel();
+        lblMCPrice2 = new javax.swing.JLabel();
+        lblMCPrice3 = new javax.swing.JLabel();
+        lblMCPrice4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableOrder = new javax.swing.JTable();
@@ -41,24 +49,40 @@ public class order extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnMC1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Screen Shot 2023-05-23 at 9.48-1.png"))); // NOI18N
-        btnMC1.setText("Meal Combo 1");
         btnMC1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnMC1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         btnMC2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Screen Shot 2023-05-23 at 9.48-2.png"))); // NOI18N
-        btnMC2.setText("Meal Combo 2");
         btnMC2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnMC2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         btnMC3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Screen Shot 2023-05-23 at 9.48.png"))); // NOI18N
-        btnMC3.setText("Meal Combo 3");
         btnMC3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnMC3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         btnMC4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Screen Shot 2023-05-23 at 9.49.png"))); // NOI18N
-        btnMC4.setText("Meal Combo 4");
         btnMC4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnMC4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+
+        lblMC1.setText("Meal Combo 1");
+
+        lblMC2.setText("Meal Combo 2");
+
+        lblMC3.setText("Meal Combo 3");
+
+        lblMC4.setText("Meal Combo 4");
+
+        lblMCPrice1.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        lblMCPrice1.setText("$10.0");
+
+        lblMCPrice2.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        lblMCPrice2.setText("$10.0");
+
+        lblMCPrice3.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        lblMCPrice3.setText("$10.0");
+
+        lblMCPrice4.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        lblMCPrice4.setText("$10.0");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -67,26 +91,60 @@ public class order extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(47, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnMC1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnMC3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnMC2, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnMC4, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(80, 80, 80))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnMC1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblMC1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblMCPrice1)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblMC2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblMCPrice2))
+                            .addComponent(btnMC2, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnMC3, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblMC3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblMCPrice3)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblMC4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblMCPrice4))
+                            .addComponent(btnMC4, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(128, 128, 128))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(101, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnMC2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnMC1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnMC2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMC1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblMC1)
+                    .addComponent(lblMC2)
+                    .addComponent(lblMCPrice1)
+                    .addComponent(lblMCPrice2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMC4, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnMC3, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addComponent(btnMC4, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMC3, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblMC3)
+                    .addComponent(lblMC4)
+                    .addComponent(lblMCPrice4)
+                    .addComponent(lblMCPrice3))
+                .addGap(7, 7, 7))
         );
 
         tableOrder.setModel(new javax.swing.table.DefaultTableModel(
@@ -108,7 +166,7 @@ public class order extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 623, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -183,6 +241,14 @@ public class order extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel lblMC1;
+    private javax.swing.JLabel lblMC2;
+    private javax.swing.JLabel lblMC3;
+    private javax.swing.JLabel lblMC4;
+    private javax.swing.JLabel lblMCPrice1;
+    private javax.swing.JLabel lblMCPrice2;
+    private javax.swing.JLabel lblMCPrice3;
+    private javax.swing.JLabel lblMCPrice4;
     private javax.swing.JTable tableOrder;
     // End of variables declaration//GEN-END:variables
 }

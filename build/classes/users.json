@@ -1,16 +1,1 @@
-[{
-        "password": "1user",
-        "name": "Al Gabriel",
-        "type": "admin",
-        "username": "user1"
-    }, {
-        "password": "2user",
-        "name": "John Doe",
-        "type": "standard",
-        "username": "user2"
-    }, {
-        "password": "3user",
-        "name": "Jane",
-        "type": "Standard",
-        "username": "user3"
-    }]
+[{"password":"1user","name":"Al Gabriel","username":"user1"},{"password":"2user","name":"John Doe","username":"user2"},{"password":"3user","name":"Jane","username":"user3"},{"password":"123","name":"lol","username":"123"}]

@@ -94,7 +94,7 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
-        new manage.manageMode().setVisible(true);
+        new Main.OrderUp().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
 
@@ -142,7 +142,6 @@ public class login extends javax.swing.JFrame {
                     JLabel lblUser = mMode.lblUser;
                     JButton btnAddUser = mMode.btnAddUser;
                     JButton btnSignOut = mMode.btnSignOut;
-                    JButton btnLogin = mMode.btnLogin;
                     
                     btnAddUser.setEnabled(true);
                     btnSignOut.setEnabled(true);

@@ -4,8 +4,6 @@
  */
 package manage;
 
-import Main.OrderUp;
-import javax.swing.*;
 
 
 public class manageMode extends javax.swing.JFrame {
@@ -15,6 +13,7 @@ public class manageMode extends javax.swing.JFrame {
      */
     public manageMode() {
         initComponents();
+        manage.Table.showUser();
     }
 
     /**
@@ -27,38 +26,24 @@ public class manageMode extends javax.swing.JFrame {
     private void initComponents() {
 
         topBar = new javax.swing.JPanel();
-        btnLogin = new javax.swing.JButton();
         btnAddUser = new javax.swing.JButton();
         btnSignOut = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        btnAdd = new javax.swing.JButton();
+        btnShowUsers = new javax.swing.JButton();
         btnEdit = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         lblUser = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        panelOrders = new javax.swing.JPanel();
+        panelUsers = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tableUsers = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 102, 102));
 
         topBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        btnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/32xLogin.png"))); // NOI18N
-        btnLogin.setText("Login");
-        btnLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnLogin.setFocusPainted(false);
-        btnLogin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnLogin.setMaximumSize(new java.awt.Dimension(100, 100));
-        btnLogin.setMinimumSize(new java.awt.Dimension(100, 100));
-        btnLogin.setPreferredSize(new java.awt.Dimension(100, 100));
-        btnLogin.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginActionPerformed(evt);
-            }
-        });
 
         btnAddUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/32xAddUser.png"))); // NOI18N
         btnAddUser.setText("Add User");
@@ -92,19 +77,18 @@ public class manageMode extends javax.swing.JFrame {
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/32xAdd.png"))); // NOI18N
-        btnAdd.setText("Add");
-        btnAdd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnAdd.setEnabled(false);
-        btnAdd.setFocusPainted(false);
-        btnAdd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnAdd.setMaximumSize(new java.awt.Dimension(100, 100));
-        btnAdd.setMinimumSize(new java.awt.Dimension(100, 100));
-        btnAdd.setPreferredSize(new java.awt.Dimension(100, 100));
-        btnAdd.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+        btnShowUsers.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/32xAdd.png"))); // NOI18N
+        btnShowUsers.setText("Show Users");
+        btnShowUsers.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnShowUsers.setFocusPainted(false);
+        btnShowUsers.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnShowUsers.setMaximumSize(new java.awt.Dimension(100, 100));
+        btnShowUsers.setMinimumSize(new java.awt.Dimension(100, 100));
+        btnShowUsers.setPreferredSize(new java.awt.Dimension(100, 100));
+        btnShowUsers.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnShowUsers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddActionPerformed(evt);
+                btnShowUsersActionPerformed(evt);
             }
         });
 
@@ -152,16 +136,14 @@ public class manageMode extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnShowUsers, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(124, 124, 124)
                 .addComponent(btnAddUser, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnSignOut, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -175,40 +157,58 @@ public class manageMode extends javax.swing.JFrame {
                     .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
                     .addComponent(btnSignOut, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnAddUser, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(btnShowUsers, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
                     .addComponent(lblUser, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelOrdersLayout = new javax.swing.GroupLayout(panelOrders);
+        panelOrders.setLayout(panelOrdersLayout);
+        panelOrdersLayout.setHorizontalGroup(
+            panelOrdersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1268, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelOrdersLayout.setVerticalGroup(
+            panelOrdersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 549, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Orders", jPanel1);
+        jTabbedPane1.addTab("Orders", panelOrders);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1268, Short.MAX_VALUE)
+        tableUsers.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane2.setViewportView(tableUsers);
+
+        javax.swing.GroupLayout panelUsersLayout = new javax.swing.GroupLayout(panelUsers);
+        panelUsers.setLayout(panelUsersLayout);
+        panelUsersLayout.setHorizontalGroup(
+            panelUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelUsersLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1256, Short.MAX_VALUE)
+                .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 549, Short.MAX_VALUE)
+        panelUsersLayout.setVerticalGroup(
+            panelUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelUsersLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 537, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Users", jPanel2);
+        jTabbedPane1.addTab("Users", panelUsers);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -217,7 +217,7 @@ public class manageMode extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1268, Short.MAX_VALUE)
+                    .addComponent(jTabbedPane1)
                     .addComponent(topBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -236,21 +236,17 @@ public class manageMode extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
-        // TODO add your handling code here:
+        new manage.addUser().setVisible(true);
     }//GEN-LAST:event_btnAddUserActionPerformed
 
     private void btnSignOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignOutActionPerformed
-        // TODO add your handling code here:
+        new manage.login().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnSignOutActionPerformed
 
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        new manage.login().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnLoginActionPerformed
-
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddActionPerformed
+    private void btnShowUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowUsersActionPerformed
+        manage.Table.showUser();
+    }//GEN-LAST:event_btnShowUsersActionPerformed
 
     private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
         // TODO add your handling code here:
@@ -288,26 +284,25 @@ public class manageMode extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new manageMode().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new manageMode().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnAdd;
     public javax.swing.JButton btnAddUser;
     public javax.swing.JButton btnDelete;
     public javax.swing.JButton btnEdit;
-    public javax.swing.JButton btnLogin;
+    public javax.swing.JButton btnShowUsers;
     public javax.swing.JButton btnSignOut;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTabbedPane jTabbedPane1;
     public javax.swing.JLabel lblUser;
+    private javax.swing.JPanel panelOrders;
+    private javax.swing.JPanel panelUsers;
+    public static javax.swing.JTable tableUsers;
     private javax.swing.JPanel topBar;
     // End of variables declaration//GEN-END:variables
 }

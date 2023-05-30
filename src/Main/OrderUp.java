@@ -91,7 +91,7 @@ public class OrderUp extends javax.swing.JFrame {
     }//GEN-LAST:event_btnKioskActionPerformed
 
     private void btnManageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageActionPerformed
-        new manage.manageMode().setVisible(true);
+        new manage.login().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnManageActionPerformed
 

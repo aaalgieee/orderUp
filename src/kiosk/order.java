@@ -51,6 +51,11 @@ public class order extends javax.swing.JFrame {
         btnMC1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Screen Shot 2023-05-23 at 9.48-1.png"))); // NOI18N
         btnMC1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnMC1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnMC1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMC1ActionPerformed(evt);
+            }
+        });
 
         btnMC2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Screen Shot 2023-05-23 at 9.48-2.png"))); // NOI18N
         btnMC2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -149,13 +154,13 @@ public class order extends javax.swing.JFrame {
 
         tableOrder.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {},
+                {},
+                {},
+                {}
             },
             new String [] {
-                "Items", "Quanity", "Price"
+
             }
         ));
         jScrollPane1.setViewportView(tableOrder);
@@ -216,6 +221,10 @@ public class order extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnMC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMC1ActionPerformed
+        new quantity().setVisible(true);
+    }//GEN-LAST:event_btnMC1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -249,6 +258,6 @@ public class order extends javax.swing.JFrame {
     private javax.swing.JLabel lblMCPrice2;
     private javax.swing.JLabel lblMCPrice3;
     private javax.swing.JLabel lblMCPrice4;
-    private javax.swing.JTable tableOrder;
+    public static javax.swing.JTable tableOrder;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JScrollPane" name="scpOrder">
+      <Properties>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[452, 200]"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="tblOrder">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="tbmOrder" type="code"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblOrderMouseClicked"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="lblEatingLocation">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Where do you want to eat?"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="tgbEatIn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Eat in"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
+        <Property name="iconTextGap" type="int" value="15"/>
+        <Property name="verticalTextPosition" type="int" value="3"/>
+      </Properties>
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="tgbEatInItemStateChanged"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="tgbTakeOut">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Take out"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
+        <Property name="iconTextGap" type="int" value="15"/>
+        <Property name="verticalTextPosition" type="int" value="3"/>
+      </Properties>
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="tgbTakeOutItemStateChanged"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnBack">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Back"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnCheckOut">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Check out"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCheckOutActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="tgbEatIn1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Eat in"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
+        <Property name="iconTextGap" type="int" value="15"/>
+        <Property name="verticalTextPosition" type="int" value="3"/>
+      </Properties>
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="tgbEatIn1ItemStateChanged"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="tgbTakeOut1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Take out"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
+        <Property name="iconTextGap" type="int" value="15"/>
+        <Property name="verticalTextPosition" type="int" value="3"/>
+      </Properties>
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="tgbTakeOut1ItemStateChanged"/>
+      </Events>
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="pnlHeader" alignment="1" min="-2" pref="720" max="-2" attributes="0"/>
+                  <Component id="scpOrder1" alignment="1" min="-2" pref="720" max="-2" attributes="0"/>
+                  <Component id="pnlTotal" alignment="1" min="-2" pref="720" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btnBack1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="btnCheckOut1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="lblPayment" min="-2" pref="340" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="tgbPayHere" min="-2" pref="160" max="-2" attributes="0"/>
+                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                              <Component id="tgbPayCounter" min="-2" pref="160" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lblEatingLocation1" min="-2" pref="340" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="tgbEatIn2" min="-2" pref="160" max="-2" attributes="0"/>
+                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                              <Component id="tgbTakeOut2" min="-2" pref="160" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="pnlHeader" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="scpOrder1" min="-2" pref="278" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="pnlTotal" min="-2" pref="88" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblEatingLocation1" min="-2" pref="138" max="-2" attributes="0"/>
+                  <Component id="tgbEatIn2" min="-2" pref="138" max="-2" attributes="0"/>
+                  <Component id="tgbTakeOut2" min="-2" pref="138" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblPayment" min="-2" pref="138" max="-2" attributes="0"/>
+                  <Component id="tgbPayHere" min="-2" pref="138" max="-2" attributes="0"/>
+                  <Component id="tgbPayCounter" min="-2" pref="138" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="93" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnBack1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnCheckOut1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="pnlHeader">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+            <EmptyBorder bottom="20" left="20" right="20" top="20"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout">
+        <Property name="alignment" type="int" value="0"/>
+        <Property name="horizontalGap" type="int" value="0"/>
+        <Property name="verticalGap" type="int" value="0"/>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lblHeaderTitle">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font component="lblHeaderTitle" property="font" relativeSize="true" size="10"/>
+              </FontInfo>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Order Summary"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="scpOrder1">
+      <Properties>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[452, 200]"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="tblOrder1">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="tbmOrder" type="code"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblOrder1MouseClicked"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="pnlTotal">
+      <Properties>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[165, 10]"/>
+        </Property>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout">
+        <Property name="alignment" type="int" value="4"/>
+        <Property name="horizontalGap" type="int" value="20"/>
+        <Property name="verticalGap" type="int" value="20"/>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lblTotal">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="true" component="lblTotal" property="font" relativeSize="true" size="0"/>
+              </FontInfo>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Total:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblTotalValue">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="true" component="lblTotalValue" property="font" relativeSize="true" size="0"/>
+              </FontInfo>
+            </Property>
+            <Property name="text" type="java.lang.String" value="$ 0.00"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="lblEatingLocation1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Where do you want to eat?"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblPayment">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="How do you want to pay?"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnBack1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Back"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBack1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnCheckOut1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Check out"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCheckOut1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="tgbEatIn2">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/assets/icons/cutlery.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Eat in"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
+        <Property name="iconTextGap" type="int" value="15"/>
+        <Property name="verticalTextPosition" type="int" value="3"/>
+      </Properties>
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="tgbEatIn2ItemStateChanged"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="tgbTakeOut2">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/assets/icons/green-tea.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Take out"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
+        <Property name="iconTextGap" type="int" value="15"/>
+        <Property name="verticalTextPosition" type="int" value="3"/>
+      </Properties>
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="tgbTakeOut2ItemStateChanged"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="tgbPayHere">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/assets/icons/credit-card.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Pay here"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
+        <Property name="iconTextGap" type="int" value="10"/>
+        <Property name="verticalTextPosition" type="int" value="3"/>
+      </Properties>
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="tgbPayHereItemStateChanged"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="tgbPayCounter">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/assets/icons/wallet.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Pay at counter"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
+        <Property name="iconTextGap" type="int" value="15"/>
+        <Property name="verticalTextPosition" type="int" value="3"/>
+      </Properties>
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="tgbPayCounterItemStateChanged"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
